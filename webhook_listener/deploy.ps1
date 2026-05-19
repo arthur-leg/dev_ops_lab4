@@ -17,7 +17,7 @@ if (-not (Test-Path "$deployDir\.git")) {
  git -C $deployDir pull --ff-only
 }
 Write-Host "Installing dependencies..."
-Set-Location $deployDir
+Set-Location "$deployDir\app"
 npm install
 Write-Host "Starting app..."
 # Start in background and write logs
